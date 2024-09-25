@@ -8,7 +8,7 @@ const Detail = () => {
   const [dataProduct, setDataProduct] = useState([]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:3000/api/v1/product/${id}`)
+    Axios.get(`http://localhost:3000/api/v2/product/${id}`)
     .then((result) => {
       setDataProduct(result.data)
     }).catch((err) => {

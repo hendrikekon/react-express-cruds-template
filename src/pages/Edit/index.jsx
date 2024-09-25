@@ -16,7 +16,7 @@ const Edit = () => {
   const [image, setImage] = useState(null);
 
   useEffect(() => {
-    Axios.get(`http://localhost:3000/api/v1/product/${id}`)
+    Axios.get(`http://localhost:3000/api/v2/product/${id}`)
     .then((result) => {
       setDataProduct(result.data)
     }).catch((err) => {
@@ -47,7 +47,7 @@ const Edit = () => {
       formData.append('image', image);
     }
   
-    Axios.patch(`http://localhost:3000/api/v1/product/${id}`, formData, {
+    Axios.patch(`http://localhost:3000/api/v2/product/${id}`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }

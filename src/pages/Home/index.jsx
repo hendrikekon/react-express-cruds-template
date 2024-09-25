@@ -22,7 +22,7 @@ const Home = () => {
   const handleDelete = (id) => {
     const confirmDelete = window.confirm('Are you sure you want to delete this product?');
     if (confirmDelete) {
-      Axios.delete(`http://localhost:3000/api/v1/product/${id}`)
+      Axios.delete(`http://localhost:3000/api/v2/product/${id}`)
         .then((response) => {
           console.log('Product deleted:', response.data);
           getData();

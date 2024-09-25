@@ -3,7 +3,7 @@ import Axios from "axios";
 
 const fetchProduct =  async () =>{
     try{
-        const result = await Axios.get('http://localhost:3000/api/v1/product')
+        const result = await Axios.get('http://localhost:3000/api/v2/product')
         // console.log('Full API response:', result);
         const responseApi = result.data;
         if (Array.isArray(responseApi)) {

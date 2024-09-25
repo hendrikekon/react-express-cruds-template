@@ -49,7 +49,7 @@ const Tambah = () => {
       formData.append('image', image);
     }
   
-    Axios.post(`http://localhost:3000/api/v1/product`, formData, {
+    Axios.post(`http://localhost:3000/api/v2/product`, formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
